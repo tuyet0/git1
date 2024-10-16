@@ -22,9 +22,13 @@ const b=[
     }
 ]
 
-const d = b.find((ba, index) => {
-    console.log(index)
-    return ba.coin === 1000
+const d = b.filter((ba, index) => {
+    for (let i = 0; i < ba.length; i++) {
+        if (i !== 1000) {
+          return (index += i);
+      }
+    }
+    return index
 })
 
 console.log(d)
